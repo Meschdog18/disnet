@@ -50,4 +50,9 @@ for (var i = 0; i < serverlist.length; i++) {
             }
           }
         }
-}
+};
+exports.help = {
+  name: "broadcast",
+  description: "Broadcasts message to all servers on your network",
+  usage: "b!broadcast <Message>"
+};

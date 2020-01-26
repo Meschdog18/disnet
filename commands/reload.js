@@ -14,3 +14,9 @@ const props = require(`./${commandName}.js`);
 client.commands.set(commandName, props);
 message.reply(`${commandName} has been reloaded`)
 };
+
+exports.help = {
+  name: "reload",
+  description: "reloads command cache",
+  usage: "b!reload <Command>"
+};
