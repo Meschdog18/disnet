@@ -23,3 +23,6 @@ exports.help = {
   description: "adds channels - #broadcast, #config, #network-userchat",
   usage: "b!setup"
 }
+exports.config = {
+  permLevel: "admin"
+}

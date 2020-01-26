@@ -20,3 +20,6 @@ exports.help = {
   description: "reloads command cache",
   usage: "b!reload <Command>"
 };
+exports.config = {
+  permLevel: "owner"
+}

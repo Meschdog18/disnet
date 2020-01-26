@@ -25,3 +25,6 @@ exports.help = {
   description: "adds your server to the corresponding network of the networkID you have entered in #config",
   usage: "b!network"
 };
+exports.config = {
+  permLevel: "admin"
+}

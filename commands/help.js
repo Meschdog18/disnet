@@ -26,3 +26,6 @@ exports.run = (client, message, args) => {
 	
 	}
 }
+exports.config = {
+  permLevel: "user"
+}
