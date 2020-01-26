@@ -5,7 +5,8 @@ exports.run = (client, message, args) => {
 		message.channel.send("**Commands:** \n"+ commandnames + "\n For a description of each use b!help <Command>")
 	}else{
 		let command = args[0];
-		command = client.commands.get(command)
+		if(client.commands.has(command)){
+			command = client.commands.get(command)
 		message.channel.send({embed: {
 			title: command.help.name,
 			description: command.help.description,
@@ -18,6 +19,10 @@ exports.run = (client, message, args) => {
 		}
 
 		})
-
+		}else{
+		
+			message.reply("That Command Does Not Exist")
+		}
+	
 	}
 }
