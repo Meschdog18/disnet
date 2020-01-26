@@ -1,5 +1,34 @@
 module.exports = (client, message) => {
-	if(!message.content.startsWith(client.config.prefix) || message.author.bot) return;
+	if (message.author.bot) return;
+var serverlist = client.guilds.array();
+var server = message.guild.channels;
+ console.log(message.channel.name)
+ if(message.channel.name == "network-userchat" ){
+   var Sender = client.Networks.get(message.guild);
+        Sender = parseInt(Sender);
+        for (var i = 0; i < serverlist.length; i++) {
+          //get network id of message sender
+          var Recipient = client.Networks.get(serverlist[i]);
+          console.log(Recipient);
+          Recipient = parseInt(Recipient);
+
+          console.log(Sender);
+          if (Sender == Recipient && serverlist[i].name != message.guild.name) {
+            try {              
+           var serv = serverlist[i].channels.find(
+                serv => serv.name === "network-userchat"
+              )
+           console.log(serv)
+              serv.send(message.author +": " + message.content)
+            } catch(err) {
+              console.log(err);
+              
+              break;
+            }
+          }
+        }
+     }
+	if(!message.content.startsWith(client.config.prefix)) return;
 
 
 
