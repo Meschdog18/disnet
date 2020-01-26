@@ -1,4 +1,4 @@
-export.run = (client, message, args) => {
+exports.run = (client, message, args) => {
   if (message.channel.type == "text") {
           message.channel
             .fetchMessages()
