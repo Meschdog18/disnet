@@ -6,3 +6,6 @@ exports.help = {
   description: "it pings?",
   usage: "b!ping"
 };
+exports.config = {
+  permLevel: "user"
+}

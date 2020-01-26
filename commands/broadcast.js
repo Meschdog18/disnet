@@ -56,3 +56,6 @@ exports.help = {
   description: "Broadcasts message to all servers on your network",
   usage: "b!broadcast <Message>"
 };
+exports.config = {
+  permLevel: "admin"
+}

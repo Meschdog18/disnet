@@ -32,3 +32,6 @@ exports.help = {
   description: "returns network info (Network id & # of Servers on Network)",
   usage: "b!network-stats"
 }
+exports.config = {
+  permLevel: "admin"
+}

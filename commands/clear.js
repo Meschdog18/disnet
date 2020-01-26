@@ -21,3 +21,6 @@ exports.help = {
   description: "Bulk deletes botmessages & commands in channel it was called",
   usage: "b!clear"
 };
+exports.config = {
+  permLevel: "admin"
+}
