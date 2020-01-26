@@ -11,20 +11,12 @@ for (var i = 0; i < serverlist.length; i++) {
 
 
           if (Sender == Recipient) {
-            console.log("send");
             try {
               var serv = serverlist[i].channels.find(
                 serv => serv.name === "broadcast"
               );
-             // let messageEmbed = new Discord.RichEmbed().setTitle("BROADCAST").addField("Broadcasted From ",message.guild.name).addField("Message", input).setFooter('Executed By ' + message.author.username + " At " + Date())
-            console.log(serverlist[i])
               serv.send({embed: {
               title: "**__BROADCAST__**",
-              /*author: {
-                name: "Broadcasted From: " + message.guild.name,
-                icon_url: message.guild.iconURL
-
-              },*/
                
                 thumbnail: {
                   url: message.guild.iconURL
