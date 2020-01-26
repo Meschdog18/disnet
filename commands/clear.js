@@ -15,9 +15,9 @@ exports.run = (client, message, args) => {
               console.log(err);
             });
         }
-}
+};
 exports.help = {
   name: "clear",
   description: "Bulk deletes botmessages & commands in channel it was called",
   usage: "b!clear"
-}
+};
