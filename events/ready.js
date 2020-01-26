@@ -20,7 +20,7 @@ function NetworkMapHandler(resu) {
   for (var i = 0; i < serverlist.length; i++) {
     configReader(serverlist[i]);
   }
-}
+configReader}
 
 function getNetID(currentServer) {
   var server = currentServer.channels;

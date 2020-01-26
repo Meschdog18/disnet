@@ -6,7 +6,7 @@ const client = new Discord.Client();
 const config = require("./config.js")
 client.config = config;
 client.Networks = new Enmap();
-
+//use git pullls
 
 fs.readdir("./events", (err, files) => {
 	if(err) return console.error(err);
