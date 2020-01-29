@@ -9,6 +9,13 @@ exports.run = (client, message, args) =>{
         }
         if (!server.find(server => server.name === "config")) {
           message.guild.createChannel("config", { type: "text" });
+         /* not implemented yet
+          message.reply("Would you like me to generate a networkID?(y/n)")
+          const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, {time: 10000})
+          collector.on('collect', message => {
+            if(message.content == "y"){
+            }
+          })*/
         } else {
           message.reply("#config already exists!");
         }

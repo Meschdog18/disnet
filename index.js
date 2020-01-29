@@ -8,6 +8,11 @@ client.config = config;
 client.Networks = new Enmap();
 //use git pullls
 
+
+//call functions file
+
+	require("./modules/functions.js")(client)
+
 fs.readdir("./events", (err, files) => {
 	if(err) return console.error(err);
 

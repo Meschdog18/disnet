@@ -1,13 +1,17 @@
+//const Discord = require("discord.js");
+
 exports.run = (client, message, args) => {
 var serverlist = client.guilds.array();
-var server = message.guild.channels;  
-var Sender = client.Networks.get(message.guild);
-const input = args.join(" "); //rejoins arg array into string
+console.log(client.Networks)
 
+var server = message.guild.channels;  
+var Sender = client.Networks.get(message.guild.name);
+const input = args.join(" "); //rejoins arg array into string
 for (var i = 0; i < serverlist.length; i++) {
           //get network id of message sender
-          var Recipient = client.Networks.get(serverlist[i]);
+          var Recipient = client.Networks.get(serverlist[i].name);
           Recipient = parseInt(Recipient);
+
 
 
           if (Sender == Recipient) {
@@ -16,6 +20,12 @@ for (var i = 0; i < serverlist.length; i++) {
                 serv => serv.name === "broadcast"
               );
               serv.send({embed: {
+             
+             /* author: { works but is disabled, because not sure if i like the look
+                name: "Disnet", 
+                icon_url: client.user.defaultAvatarURL
+              },*/
+              color: 0xeb3434, 
               title: "**__BROADCAST__**",
                
                 thumbnail: {
