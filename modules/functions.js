@@ -2,10 +2,10 @@ const mysql = require('mysql')
 var NetIDs = [];
 var Server = [];
 var con = mysql.createConnection({
-  host: "remotemysql.com",
-  user: "SpNhIyraBc",
-  password: "mQlY9EPFo1",
-  database: "SpNhIyraBc"
+  host: "",
+  user: "",
+  password: "",
+  database: ""
 });
 
 con.connect(function(err){
