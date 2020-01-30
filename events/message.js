@@ -40,7 +40,7 @@ var server = message.guild.channels;
 	if(!cmd) return //returns if command doesn't exist
 	
 	//NEED TO ADD PROPER USER LEVEL SYSTEM
-
+console.log(cmd.config.permLevel)
 	//if user calling command doesn't have bot owner level permission cancel command 
 	if(cmd.config.permLevel == "owner" && message.author.id != client.config.ownerID) return;
 	let requiredPerm = cmd.config.permLevel
@@ -49,6 +49,11 @@ var server = message.guild.channels;
 	if(requiredPerm == "admin" && !(message.member.hasPermission("ADMINISTRATOR"))) return;
 
 
-
-	cmd.run(client, message, args);
+  try{
+      cmd.run(client, message, args);
+  } catch (err){
+    console.log("unhandled error")
+   console.log(err)
+    //handles any unhandled errors with commands
+  }
 }

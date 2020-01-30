@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
             .then(messages => {
               const botMessages = messages.filter(msg => msg.author.bot);
               const commands = messages.filter(msg =>
-                msg.content.startsWith(client.prefix)
+                msg.content.startsWith(client.config.prefix)
               );
               message.channel.bulkDelete(botMessages);
               message.channel.bulkDelete(commands);

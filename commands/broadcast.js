@@ -25,7 +25,7 @@ for (var i = 0; i < serverlist.length; i++) {
                 name: "Disnet", 
                 icon_url: client.user.defaultAvatarURL
               },*/
-              color: 0xeb3434, 
+              color: 0x3850eb, 
               title: "**__BROADCAST__**",
                
                 thumbnail: {

@@ -1,7 +1,7 @@
 exports.run = (client, message, args) => {
 	
 if(args[0] && args [1] != ""){
-	client.registerUser(message.author.id, args[0], args[1], message.guild, message)
+	client.registerNetwork(message.author.id, args[0], args[1], message.guild.name, message)
 }else{
 	message.reply("You must prove a NetID & Password!")
 }
