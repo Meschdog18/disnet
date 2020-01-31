@@ -17,7 +17,8 @@ exports.run = (client, message, args) => {
 		if(client.commands.has(command)){
 			command = client.commands.get(command)
 		message.channel.send({embed: {
-			title: command.help.name,
+			color: 0xe8da15,
+			title: command.help.name.toUpperCase(),
 			description: command.help.description,
 			fields: [
                  {
@@ -42,3 +43,8 @@ exports.run = (client, message, args) => {
 exports.config = {
   permLevel: "user"
 }
+exports.help = {
+  name: "help",
+  description: "Gives info on a certain command",
+  usage: "b!help <Command>"
+};

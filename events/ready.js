@@ -1,8 +1,17 @@
-module.exports = (client) => {
+module.exports = async (client) => {
 	console.log("Bot Online - Server Indexing Starting...");
-	
+
+//indexes all servers
+client.getNetwork()
+
+
+
+
+
+//index all servers (Depreciated)
+/*
 var serverlist = client.guilds.array();
-//index all servers
+
 NetworkMapHandler();
 
 function configReader(serv) {
@@ -13,7 +22,7 @@ function configReader(serv) {
 }
 function map(result, server) {
   client.Networks.set(server.toString(), result);
-  
+
 }
 function NetworkMapHandler(resu) {
   //calls configReader which starts the promise of finding netID, once netID is found, map() maps it to the correct server
@@ -48,5 +57,5 @@ function getNetID(currentServer) {
     }
   });
 }	
-
+*/
 }
