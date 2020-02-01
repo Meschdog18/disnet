@@ -1,30 +1,37 @@
 exports.run = (client, message, args) => {
-  if (client.Networks.get(message.guild) == undefined) {
-          console.log("Not On Network");
-          var success = true
-         
-          try{
-           let netID = getNetID(message.guild);
-          netID.then(function(result) {
-           map(result, message.guild);
-          });
-         }catch{
-           success = false
+  var ServerCount = 0;
+ var Sender = client.Networks.get(message.guild);
+ var serverlist = client.guilds.array();
+
+
+        for (var i = 0; i < serverlist.length; i++) {
+            var Recipient = client.Networks.get(serverlist[i]);
+            Recipient = parseInt(Recipient);
+            if(Sender == Recipient){
+              ServerCount++
+            } 
          }
-         if(success){
-           message.reply("You have connected to the Network!");
-         }
-          
-        } else {
-          console.log("on network");
-          message.reply("You're already connected to a Network")
-        }
+        message.channel.send({embed: {
+      title: "NETWORK",
+      fields: [
+                {
+                 name:"Network ID",
+                 value: Sender.toString()
+                },
+                {
+                name:"Server Count",
+                value: ServerCount
+                } 
+                  ]
+    }
+
+    })
 }
 exports.help = {
-  name: "network",
-  description: "adds your server to the corresponding network of the networkID you have entered in #config",
+ name: "network",
+  description: "returns network info (Network id & # of Servers on Network)",
   usage: "b!network"
-};
+}
 exports.config = {
   permLevel: "admin"
 }

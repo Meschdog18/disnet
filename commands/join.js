@@ -7,9 +7,9 @@ exports.run = (client, message, args) => {
 	}
 }
 exports.help = {
-  name: "leave",
+  name: "join",
   description: "leaves networks",
-  usage: "b!leave"
+  usage: "b!join <NetID> <Password>"
 };
 exports.config = {
   permLevel: "admin"
