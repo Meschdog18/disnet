@@ -6,7 +6,6 @@ const client = new Discord.Client();
 const config = require("./config.js")
 client.config = config;
 client.Networks = new Enmap();
-//use git pullls
 
 
 //call functions file
@@ -38,8 +37,7 @@ fs.readdir("./commands/", (err, files) => {
 	});
 });
 
-	//preform startup indexing
-//var serverlist = client.guilds.array();
+
 
 
 
