@@ -7,7 +7,6 @@ const config = require("./config.js")
 client.config = config;
 client.Networks = new Enmap();
 
-
 //call functions file
 
 	require("./modules/functions.js")(client)

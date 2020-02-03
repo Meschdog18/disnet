@@ -1,6 +1,13 @@
 exports.run = (client, message, args) => {
   var ServerCount = 0;
- var Sender = client.Networks.get(message.guild);
+  var Sender = client.Networks.get(message.guild)
+console.log(Sender)
+if(Sender == null){
+  message.reply("You are not a part of a network!")
+  return
+}
+
+
  var serverlist = client.guilds.array();
 
 

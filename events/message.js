@@ -42,7 +42,14 @@ module.exports = async (client, message) => {
 
     //NEED TO ADD PROPER USER LEVEL SYSTEM
     console.log(cmd.config.permLevel)
-        //if user calling command doesn't have bot owner level permission cancel command 
+    
+    //owner bypass
+    if (message.author.id == client.config.ownerID){
+            cmd.run(client, message, args);
+            return;
+    }
+            //if user calling command doesn't have bot owner level permission cancel command 
+
     if (cmd.config.permLevel == "owner" && message.author.id != client.config.ownerID) return;
     let requiredPerm = cmd.config.permLevel
 
