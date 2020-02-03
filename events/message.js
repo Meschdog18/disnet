@@ -4,7 +4,6 @@ module.exports = async (client, message) => {
     if (message.author.bot) return;
     var serverlist = client.guilds.array();
     var server = message.guild.channels;
-    console.log(message.channel.name)
     if (message.channel.name == "network-userchat") {
         var Sender = client.Networks.get(message.guild);
         Sender = parseInt(Sender);
