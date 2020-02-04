@@ -40,7 +40,6 @@ module.exports = async (client, message) => {
     if (!cmd) return //returns if command doesn't exist
 
     //NEED TO ADD PROPER USER LEVEL SYSTEM
-    console.log(cmd.config.permLevel)
     
     //owner bypass
     if (message.author.id == client.config.ownerID){
